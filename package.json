@@ -2,9 +2,11 @@
   "name": "vega-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "DEBUG='vega-backend*' mocha",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [],
   "author": "Shiv",
@@ -24,5 +26,13 @@
     "mongoose": "^4.9.7",
     "morgan": "^1.8.1",
     "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "aws-sdk-mock": "^1.7.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0",
+    "superagent": "^3.5.2"
   }
 }

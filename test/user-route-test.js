@@ -7,22 +7,22 @@ const Promise = require('bluebird');
 
 const User = require('../model/user.js');
 
-const awsMocks = require('./lib/aws-mocks.js');
+// const awsMocks = require('./lib/aws-mocks.js');
 
 require('../server.js');
 
 const url = `http://localhost:${process.env.PORT}`;
 
 const exampleUser = {
-  username: 'weasel',
+  username: 'turtlefish',
   password: 'bruh',
-  email: 'testing@test.com'
+  email: 'yuuuuupppp@dank.com'
 };
 
 const newUser = {
-  username: 'shazam',
-  password: 'epiphany',
-  email: 'shabazz@lovesjazz.com'
+  username: 'shivvy',
+  password: 'madness',
+  email: 'yooooooo@lit.com'
 };
 
 describe('THE USER ROUTES TEST MODULE =================================', function() {
