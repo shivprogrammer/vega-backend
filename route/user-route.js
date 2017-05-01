@@ -14,9 +14,13 @@ const userRouter = module.exports = Router();
 userRouter.post('/api/signup', jsonParser, function(req, res, next) {
   debug('POST: /api/signup');
 
-  if(!req.body.username || (!req.body.password)){
+  if(!req.body.username || (!req.body.password)) {
     return next(createError(400, 'bad request'));
   }
+  // if(req.body.username < 4) {
+  //   return next(createError(400, 'username must be at least 4 characters'));
+  // }
+
 
   let password = req.body.password;
   delete req.body.password;

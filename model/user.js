@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const createError = require('http-errors');
 const Promise = require('bluebird');
-const debug = require('debug')('quiver:user');
+const debug = require('debug')('vega:user');
 
 const userSchema = Schema({
   username: { type: String, required: true, unique: true, minLength: 4},
