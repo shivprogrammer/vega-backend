@@ -10,7 +10,7 @@ const Promise = require('bluebird');
 const debug = require('debug')('vega:user');
 
 const userSchema = Schema({
-  username: { type: String, required: true, unique: true, minLength: 4},
+  username: { type: String, required: true, unique: true }, // minLength: 4},
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   findHash: { type: String, unique: true }
