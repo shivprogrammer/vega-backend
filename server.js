@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
   res.send('you are in the right place homie');
 });
 
+app.get('/home', (req, res) => {
+  res.send('should load the damn main page');
+});
+
 app.listen(PORT, () => {
   debug(`Server is running at: ${PORT}`);
 });
+
+//MONGODB_URI='mongodb://localhost/vega'
