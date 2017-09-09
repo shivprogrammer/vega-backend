@@ -7,8 +7,6 @@ const Promise = require('bluebird');
 
 const User = require('../model/user.js');
 
-// const awsMocks = require('./lib/aws-mocks.js');
-
 require('../server.js');
 
 const url = `http://localhost:${process.env.PORT}`;
@@ -40,7 +38,6 @@ describe('THE USER ROUTES TEST MODULE =================================', functi
         .end((err, res) => {
           if (err) return done(err);
           expect(res.status).to.equal(200);
-          // expect(res.text).to.be.a('string');
           done();
         });
       });
@@ -67,21 +64,6 @@ describe('THE USER ROUTES TEST MODULE =================================', functi
         });
       });
     });
-
-    // describe('with a username that is less than 4 characters', function() {
-    //   it('should response with a 400', done => {
-    //     request.post(`${url}/api/signup`)
-    //     .send({
-    //       username: 'yaya',
-    //       password: 'accelerate',
-    //       email: 'coconuts@tropical.com',
-    //     })
-    //     .end((err, res) => {
-    //       expect(res.status).to.equal(400);
-    //       done();
-    //     });
-    //   });
-    // });
 
     describe('without an email', function() {
       it('should respond with a 400', done => {
